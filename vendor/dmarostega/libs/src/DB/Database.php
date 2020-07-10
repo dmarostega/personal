@@ -1,5 +1,7 @@
 <?php
 
+namespace DMarostega;
+
 class DB{
 	private static $instance;
 	

@@ -1,4 +1,5 @@
 <?php
+
 require_once BASE;
 
 abstract class Model{

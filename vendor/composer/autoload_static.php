@@ -7,12 +7,14 @@ namespace Composer\Autoload;
 class ComposerStaticInit09742e60f2eb61cc4d77a8e7910c5f3c
 {
     public static $files = array (
+        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
         'S' => 
         array (
+            'Slim\\Psr7\\' => 10,
             'Slim\\' => 5,
         ),
         'P' => 
@@ -25,11 +27,20 @@ class ComposerStaticInit09742e60f2eb61cc4d77a8e7910c5f3c
         ),
         'F' => 
         array (
+            'Fig\\Http\\Message\\' => 17,
             'FastRoute\\' => 10,
+        ),
+        'D' => 
+        array (
+            'DMarostega\\' => 11,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Slim\\Psr7\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/slim/psr7/src',
+        ),
         'Slim\\' => 
         array (
             0 => __DIR__ . '/..' . '/slim/slim/Slim',
@@ -56,14 +67,18 @@ class ComposerStaticInit09742e60f2eb61cc4d77a8e7910c5f3c
         array (
             0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
         ),
+        'Fig\\Http\\Message\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fig/http-message-util/src',
+        ),
         'FastRoute\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/fast-route/src',
         ),
-    );
-
-    public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/..' . '/dmarostega/libs/src',
+        'DMarostega\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dmarostega/libs/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -81,7 +96,6 @@ class ComposerStaticInit09742e60f2eb61cc4d77a8e7910c5f3c
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit09742e60f2eb61cc4d77a8e7910c5f3c::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit09742e60f2eb61cc4d77a8e7910c5f3c::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInit09742e60f2eb61cc4d77a8e7910c5f3c::$fallbackDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit09742e60f2eb61cc4d77a8e7910c5f3c::$prefixesPsr0;
 
         }, null, ClassLoader::class);

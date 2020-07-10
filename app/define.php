@@ -14,8 +14,8 @@ define("CONTROLLERS",dirname(__FILE__)."/../Controller/");
 define("VIEWS",dirname(__FILE__)."/../View/");
 
 /*  Library's   */
-define("LIB","lib/");
-define("APP","app/");
+//define("LIB","lib/");
+//define("APP","app/");
 
 define("DOMAIN","");
 

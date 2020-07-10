@@ -4,11 +4,12 @@
     "require": {
         "phpmailer/phpmailer": "6.1.*",
         "rain/raintpl": "3.0.0",
-        "slim/slim": "4.5.0"
+        "slim/slim": "4.5.0",
+        "slim/psr7": "^1.1"
     },
     "autoload": {
         "psr-4": {
-            "":"vendor\\dmarostega\\libs\\src"
+            "DMarostega\\":"vendor\\dmarostega\\libs\\src"
         }
     },
     "authors": [
