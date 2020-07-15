@@ -9,7 +9,7 @@ class View{
 
     private $Template;
     private $arguments;
-    private $defaults = [
+    private $defaults = [      
         'data'=>[],
 
     ];
