@@ -125,9 +125,9 @@ footer p{
 
 .presentation img{
     display: block;
-    background-size: cover;
+    background-size: 12em cover;
     background-repeat: no-repeat;
-    /* background-position: bottom; */
+    background-position: center;
     width: 12em;
     height: 12em;
     border:inherit;

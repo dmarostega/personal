@@ -1,10 +1,17 @@
 <?php
 
-require_once "define.php";
-require_once "config.php";
-require_once "View.php";
+require_once "app\define.php";
+include_once "app\config.php";
 
-require_once BASE;
+use APP\Define;
+use APP\Configure;
+
+Define::run();
+
+
+// require_once "View.php";
+
+// require_once BASE;
 
 //require_once LIB."Request.php";
 //require_once "app.php";

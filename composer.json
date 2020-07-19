@@ -9,7 +9,9 @@
     },
     "autoload": {
         "psr-4": {
-            "DMarostega\\":"vendor\\dmarostega\\libs\\src"
+            "DMarostega\\":"vendor\\dmarostega\\libs\\src",
+            "APP\\config\\":"vendor\\dmarostega\\libs\\src\\config",
+            "APP\\Template\\":"vendor\\dmarostega\\libs\\src\\template"
         }
     },
     "authors": [

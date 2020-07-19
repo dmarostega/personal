@@ -1,6 +1,5 @@
 <?php
+// use APP\Configure;
 
-$_CSS=['personalite','modernize','style'];
-$_JS=['bootstrap'];
-
-// var_dump($_CSS);
+$links = ['personalite','modernize','style'];
+$scripts = ['bootstrap'];

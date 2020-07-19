@@ -34,6 +34,11 @@ class ComposerStaticInit09742e60f2eb61cc4d77a8e7910c5f3c
         array (
             'DMarostega\\' => 11,
         ),
+        'A' => 
+        array (
+            'APP\\config\\' => 11,
+            'APP\\Template\\' => 13,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -78,6 +83,14 @@ class ComposerStaticInit09742e60f2eb61cc4d77a8e7910c5f3c
         'DMarostega\\' => 
         array (
             0 => __DIR__ . '/..' . '/dmarostega/libs/src',
+        ),
+        'APP\\config\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dmarostega/libs/src/config',
+        ),
+        'APP\\Template\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dmarostega/libs/src/template',
         ),
     );
 

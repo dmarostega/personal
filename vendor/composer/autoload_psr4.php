@@ -16,4 +16,6 @@ return array(
     'Fig\\Http\\Message\\' => array($vendorDir . '/fig/http-message-util/src'),
     'FastRoute\\' => array($vendorDir . '/nikic/fast-route/src'),
     'DMarostega\\' => array($vendorDir . '/dmarostega/libs/src'),
+    'APP\\config\\' => array($vendorDir . '/dmarostega/libs/src/config'),
+    'APP\\Template\\' => array($vendorDir . '/dmarostega/libs/src/template'),
 );
