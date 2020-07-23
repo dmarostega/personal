@@ -10,7 +10,7 @@ use DMarostega\ViewAdmin;
 
 $app = AppFactory::create();
 
-$app->get('/', function (Request $request, Response $response, $args) {
+$app->get('/', function (Request $request, Response $response, $args) {   
     $View = new View();
     $View->setTemplate('index');
 
@@ -18,6 +18,7 @@ $app->get('/', function (Request $request, Response $response, $args) {
 });
 
 $app->get('/admin', function (Request $request, Response $response, $args) {
+    
     $View = new ViewAdmin();    
     $View->setTemplate('index');
     
