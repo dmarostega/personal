@@ -1,6 +1,6 @@
 <?php
 
-namespace APP\Template;
+namespace DMarostega\Template;
 
 abstract class Has{
 

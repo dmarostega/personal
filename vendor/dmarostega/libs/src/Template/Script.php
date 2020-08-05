@@ -1,6 +1,6 @@
 <?php
 
-namespace APP\Template;
+namespace DMarostega\Template;
 
 class Script extends Has{
     /*  HTML5 */

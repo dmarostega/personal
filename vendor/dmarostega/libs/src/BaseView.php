@@ -4,14 +4,16 @@ namespace DMarostega;
 
 // namespace
 use Rain\Tpl;
-use \APP\config\Configure;
+use \DMarostega\config\Configure;
 
 abstract class BaseView {
 
     private $name;
     private $Template;    
     private $arguments;
-    private $defaults = [      
+    private $defaults = [    
+        'header' => true,
+        'footer' => true,  
         'data'=>[],
     ];
 
@@ -39,7 +41,7 @@ abstract class BaseView {
         $this->Template->assign('Source',Configure::SubPaths() );    
 
         $this->setData($this->arguments['data']);
-        $this->Template->draw('header');
+        if($this->arguments['header']) $this->Template->draw('header');
     }
 
     public function setTemplate($name, $args = array(), $returnHtml = false  ){
@@ -48,7 +50,7 @@ abstract class BaseView {
     }
 
     public function __destruct(){
-        $this->Template->draw('footer');
+        if($this->arguments['footer']) $this->Template->draw('footer');
     }
 
     private function setData($data = array()){

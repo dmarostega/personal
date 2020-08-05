@@ -1,11 +1,13 @@
 <?php
 
-require_once "define.php";
+// require_once "define.php";   
 
 use APP\Define;
-use APP\config\Configure as Configure;
+use DMarostega\config\Configure as Configure;
+
 
 Define::run();
+
 Configure::create('main');
 // // Configure::setPathTemplate('/resources/main/');
 Configure::addLink('css/personalite.css');

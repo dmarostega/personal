@@ -1,9 +1,9 @@
 <?php
 
-namespace APP\config;
+namespace DMarostega\config;
 
-use APP\Template\Link;
-use APP\Template\Script;
+use DMarostega\Template\Link;
+use DMarostega\Template\Script;
 
 class WebPath{
     private $type = 'css';
@@ -33,6 +33,7 @@ class Domain{
     private $sub_paths  = array();
     private $links      = array();        // = ['personalite','modernize','style'];
     private $scripts    = array();        // = ['bootstrap'];
+    private $loginPath = 'login';
 
     public function __construct($name = ''){
         $this->name = $name;
@@ -64,6 +65,10 @@ class Domain{
 
     public function PathRender(){        
       //  return  ((bool) $this->name != false ? "/" . $this->name : '' );
+    }
+
+    public function GetLoginPath(){
+        return  $this->name."\\".$this->loginPath;
     }
 
 
@@ -137,6 +142,10 @@ class Configure{
     
     public static function SubPaths(){
         return self::$domains[self::$currentDomain]->SubPaths();
+    }
+
+    public static function GetLoginPath(){
+        return self::$domains[self::$currentDomain]->GetLoginPath();
     }
 
 

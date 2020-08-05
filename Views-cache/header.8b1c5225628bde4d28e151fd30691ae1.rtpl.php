@@ -4,7 +4,7 @@
         <title>Rock Code Labs</title>
         <link rel="icon" type="image/png" href="<?php echo $Source['img']->render('favicon', '.ico'); ?>">
         <meta charset="UTF-8">
-        <?php $counter1=-1;  if( isset($Style) && ( is_array($Style) || $Style instanceof Traversable ) && sizeof($Style) ) foreach( $Style as $key1 => $value1 ){ $counter1++; ?><?php echo $value1->run(); ?><?php } ?>        
+        <?php $counter1=-1;  if( isset($Style) && ( is_array($Style) || $Style instanceof Traversable ) && sizeof($Style) ) foreach( $Style as $key1 => $value1 ){ $counter1++; ?><?php echo $value1->run(); ?><?php } ?>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     </head>
     <body  class="bg-default">

@@ -10,8 +10,14 @@
     "autoload": {
         "psr-4": {
             "DMarostega\\":"vendor\\dmarostega\\libs\\src",
-            "APP\\config\\":"vendor\\dmarostega\\libs\\src\\config",
-            "APP\\Template\\":"vendor\\dmarostega\\libs\\src\\template"
+            "DMarostega\\MVC\\":"vendor\\dmarostega\\libs\\src\\MVC",
+            "DMarostega\\Database\\":"vendor\\dmarostega\\libs\\src\\DB",
+            "DMarostega\\config\\":"vendor\\dmarostega\\libs\\src\\config",
+            "DMarostega\\Template\\":"vendor\\dmarostega\\libs\\src\\template",
+            "DMarostega\\Security\\":"vendor\\dmarostega\\libs\\src\\security",
+            "APP\\":"app",
+            "APP\\MVC\\Model\\":"Model",
+            "APP\\MVC\\Controller\\":"Controller"
         }
     },
     "authors": [

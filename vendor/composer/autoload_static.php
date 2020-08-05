@@ -32,12 +32,18 @@ class ComposerStaticInit09742e60f2eb61cc4d77a8e7910c5f3c
         ),
         'D' => 
         array (
+            'DMarostega\\config\\' => 18,
+            'DMarostega\\Template\\' => 20,
+            'DMarostega\\Security\\' => 20,
+            'DMarostega\\MVC\\' => 15,
+            'DMarostega\\Database\\' => 20,
             'DMarostega\\' => 11,
         ),
         'A' => 
         array (
-            'APP\\config\\' => 11,
-            'APP\\Template\\' => 13,
+            'APP\\MVC\\Model\\' => 14,
+            'APP\\MVC\\Controller\\' => 19,
+            'APP\\' => 4,
         ),
     );
 
@@ -80,17 +86,41 @@ class ComposerStaticInit09742e60f2eb61cc4d77a8e7910c5f3c
         array (
             0 => __DIR__ . '/..' . '/nikic/fast-route/src',
         ),
+        'DMarostega\\config\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dmarostega/libs/src/config',
+        ),
+        'DMarostega\\Template\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dmarostega/libs/src/template',
+        ),
+        'DMarostega\\Security\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dmarostega/libs/src/security',
+        ),
+        'DMarostega\\MVC\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dmarostega/libs/src/MVC',
+        ),
+        'DMarostega\\Database\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dmarostega/libs/src/DB',
+        ),
         'DMarostega\\' => 
         array (
             0 => __DIR__ . '/..' . '/dmarostega/libs/src',
         ),
-        'APP\\config\\' => 
+        'APP\\MVC\\Model\\' => 
         array (
-            0 => __DIR__ . '/..' . '/dmarostega/libs/src/config',
+            0 => __DIR__ . '/../..' . '/Model',
         ),
-        'APP\\Template\\' => 
+        'APP\\MVC\\Controller\\' => 
         array (
-            0 => __DIR__ . '/..' . '/dmarostega/libs/src/template',
+            0 => __DIR__ . '/../..' . '/Controller',
+        ),
+        'APP\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app',
         ),
     );
 
