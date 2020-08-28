@@ -18,6 +18,7 @@ return array(
     'DMarostega\\config\\' => array($vendorDir . '/dmarostega/libs/src/config'),
     'DMarostega\\Template\\' => array($vendorDir . '/dmarostega/libs/src/template'),
     'DMarostega\\Security\\' => array($vendorDir . '/dmarostega/libs/src/security'),
+    'DMarostega\\MVC\\Interfaces\\' => array($vendorDir . '/dmarostega/libs/src/MVC/Interfaces'),
     'DMarostega\\MVC\\' => array($vendorDir . '/dmarostega/libs/src/MVC'),
     'DMarostega\\Database\\' => array($vendorDir . '/dmarostega/libs/src/DB'),
     'DMarostega\\' => array($vendorDir . '/dmarostega/libs/src'),

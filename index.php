@@ -10,7 +10,7 @@ use DMarostega\View;
 use DMarostega\ViewAdmin;
 use DMarostega\Security\Authentication;
 
-use APP\MVC\Controller\UserController;
+use APP\MVC\Controller\ProfileController;
 
 $app = AppFactory::create();
 
@@ -55,31 +55,20 @@ $app->post('/admin/login', function(Request $request, Response $response, $args)
 });
 
 
-/*
-            $app->get('/admin/register', function (Request $request, Response $response, $args) {
-                $View = new ViewAdmin([
-                    'header' => false,
-                    'footer' => false
-                ]);    
-                $View->setTemplate('register');
-                
-                return $response;
-            });
-*/
-
-$app->get('/admin/register', function($request, $response, $args) use ($app) { return UserController::Register($app,$request, $response); }  );
-// $app->get('/admin/register', \UserController::class . ':Index');
-
-/*
-$app->post('/admin/register', function (Request $request, Response $response, $args) {
+/**/
+$app->get('/admin/register', function (Request $request, Response $response, $args) {
     $View = new ViewAdmin([
         'header' => false,
         'footer' => false
     ]);    
-    $checking = $request->getParsedBody();
-    
+    $View->setTemplate('register');   
     return $response;
-});*/
+});
+
+$app->post('/admin/register', function($request, $response, $args) use ($app) {     
+    return ProfileController::Register($app,$request, $response); 
+}  );
+
 
 $app->run();
 

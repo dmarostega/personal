@@ -35,6 +35,7 @@ class ComposerStaticInit09742e60f2eb61cc4d77a8e7910c5f3c
             'DMarostega\\config\\' => 18,
             'DMarostega\\Template\\' => 20,
             'DMarostega\\Security\\' => 20,
+            'DMarostega\\MVC\\Interfaces\\' => 26,
             'DMarostega\\MVC\\' => 15,
             'DMarostega\\Database\\' => 20,
             'DMarostega\\' => 11,
@@ -97,6 +98,10 @@ class ComposerStaticInit09742e60f2eb61cc4d77a8e7910c5f3c
         'DMarostega\\Security\\' => 
         array (
             0 => __DIR__ . '/..' . '/dmarostega/libs/src/security',
+        ),
+        'DMarostega\\MVC\\Interfaces\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dmarostega/libs/src/MVC/Interfaces',
         ),
         'DMarostega\\MVC\\' => 
         array (

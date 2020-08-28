@@ -81,11 +81,26 @@ class DBService  {
     }
 
     public static function insert($tablename,array $cols){
-        $str = "INSERT INTO {$tablename} (".  implode(", ", array_keys($cols) ) .") VALUES (". implode(", ", array_fill(0, count($cols), "?" ) ) . ");  ";
+    //  var_dump($tablename);
 
-        $stm = self::con()->prepare($str);
-        $stm->execute(array_values($cols));
+        unset($cols['tablename'],$cols['created_at'],$cols['updated_at'],$cols['relationship']);
 
+        $cols = array_filter($cols,function($var){
+            return !is_object($var)    ;
+        });
+
+        try{
+
+          $str = "INSERT INTO {$tablename} (".  implode(", ", array_keys($cols) ) .") VALUES (". implode(", ", array_fill(0, count($cols), "?" ) ) . ");  ";
+// var_dump($tablename,$cols);
+          $stm = self::con()->prepare($str);
+          $stm->execute(array_values($cols));
+
+        }catch(PDOException $e){
+          echo "<h5>Erro: " . $e.get_message()."</h5>";
+        }
+     //   var_dump( self::con()->lastInsertId()  );
+     
         return self::con()->lastInsertId();
     }
 
@@ -106,6 +121,10 @@ class DBService  {
         $stm = self::con()->prepare( $str);      
         $stm->execute([$where]);        
       }
+    }
+
+    public static function getLastInsertId(){
+      return self::con()->lastInsertId();
     }
 
     public static function update($tablename,array $cols,$id){

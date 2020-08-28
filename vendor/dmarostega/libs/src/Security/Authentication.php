@@ -20,14 +20,30 @@ class Authentication{
     }
 
     public static function Login(string $username, string $password){
+
+        $usernameField = 'username';
+
+      /*  if(strpos('@',$username) > 0){
+            $person = DB::fin('person',
+            ['*'],
+            [
+                'email'
+            ])
+        }
+*/
+
         $_SESSION[Authentication::SESSION]= DB::find('user',[
             '*'
         ],
         [
-            'username' => $username,
+            $usernameField => $username,
             'password' => $password
         ]);
     }    
+
+    public static function Logout(){
+        $_SESSION[Authentication::SESSION] = false;
+    }
 
     public static function HasLogged(){
         // var_dump($_SESSION['user_logged']);
@@ -43,8 +59,7 @@ class Authentication{
         return false;
     }
 
-    public static function checkLogin(){
-        // var_dump("AQUI " , self::HasLogged());
+    public static function checkLogin(){        
        if(!self::HasLogged()){
             header("Location: /" .  Configure::GetLoginPath());
        }      

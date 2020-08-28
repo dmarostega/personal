@@ -2,13 +2,13 @@
 namespace APP\MVC\Controller;
 
 use DMarostega\MVC\Controller;
-use APP\MVC\Model\UserModel;
+use APP\MVC\Model\ProfileModel;
 
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use \DMarostega\ViewAdmin as View;
 
-class UserController extends Controller {       
+class ProfileController extends Controller {       
 
     public static $view;
 
@@ -27,10 +27,10 @@ class UserController extends Controller {
     public static function Register($app, Request $request, Response $response, $args =[]){
 
         if( $request->getParsedBody()['name'] && $request->getParsedBody()['terms'] ){
-            $user = new UserModel( $request->getParsedBody() );
+            $user = new ProfileModel( $request->getParsedBody() );
             $user->insert();
         }   
-
+exit;
         return $response->withHeader('Location', '/admin/login')->withStatus(302);
     }
 }

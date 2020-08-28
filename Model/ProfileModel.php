@@ -5,16 +5,13 @@ namespace APP\MVC\Model;
 use DMarostega\MVC\Model;
 //use DMarostega\Database\DBService as DB;
 
-class UserModel extends Model {
+class ProfileModel extends Model {
 
-    protected $person;
-    //protected $user_type;
+    protected $user;
 
     public function __construct($args=array()){     
         parent::__construct($args);
-        $this->person = new PersonModel($args);
-      //  $this->person = new PersonModel($args);
-
+        $this->user = new UserModel($args);
         return $this;
     }
 

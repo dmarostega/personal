@@ -28,15 +28,26 @@
     <div class="card-body register-card-body">
       <p class="login-box-msg">Register a new membership</p>
 
+      <input type="hidden" name="type_user_id" value="2" > <!-- Conventional User -->
+
       <form action="/admin/register" method="post">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Full name" name="">
+          <input type="text" class="form-control" placeholder="Name" name="name">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
+            </div>
+          </div>
+        </div> 
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Last Name" name="last_name">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-user"></span>
             </div>
           </div>
         </div>
+
         <div class="input-group mb-3">
           <input type="email" class="form-control" placeholder="Email" name="email">
           <div class="input-group-append">
@@ -45,8 +56,10 @@
             </div>
           </div>
         </div>
+
+
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" class="form-control" placeholder="Password" name="password">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -54,7 +67,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Retype password">
+          <input type="password" class="form-control" placeholder="Retype password" name="re-password">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
